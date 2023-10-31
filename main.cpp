@@ -19,6 +19,17 @@ double getAverage(vector<int>numbers)
 	return numbersAverage;
 }
 
+int getMin(vector<int>numbers)
+{
+	int minElement = numbers[0];
+	for (int i = 1; i < numbers.size(); i++){
+		if(minElement > numbers[i]){
+			minElement = numbers[i];
+		}
+	}
+	return minElement;
+}
+
 int main()
 {
 	vector<int> numbers;
@@ -33,6 +44,10 @@ int main()
 	double numbersAverage;
 	numbersAverage = getAverage(numbers);
 	cout<<numbersAverage<<endl;
+
+	int minElement;
+        minElement = getMin(numbers);
+        cout<< minElement <<endl;
 	return 0;
 }
 
